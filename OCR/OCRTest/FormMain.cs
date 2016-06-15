@@ -11,6 +11,9 @@ using AForge.Imaging;
 using AForge.Imaging.Filters;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
 
 namespace OCRTest
 {
@@ -19,6 +22,63 @@ namespace OCRTest
         public FormMain()
         {
             InitializeComponent();
+            String ip = "172.16.102.13";
+            t1 = new TcpListener(ip, 4243);
+            cliente = default(TcpClient);
+            t1.Start();
+            cliente = t1.AcceptTcpClient();
+
+        }
+
+        TcpListener t1;
+        Socket skt;
+        NetworkStream ns;
+        StreamReader sr;
+        Thread th;
+        TcpClient cliente;
+        String mensagem = "Retornou";
+
+        public void retornar() {
+            ns = cliente.GetStream();
+            byte[] buffer = Encoding.ASCII.GetBytes(mensagem);
+            ns.Write(buffer, 0, buffer.Length);
+        }
+        
+
+        string GetIpAdress()
+        {
+            IPHostEntry host;
+            string localip = "?";
+            host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    localip = ip.ToString();
+                }
+            }
+            return localip;
+        }
+        void ReceiveImage()
+        {
+            try
+            {
+                t1 = new TcpListener(4242);
+                t1.Start();
+                skt = t1.AcceptSocket();
+                ns = new NetworkStream(skt);
+                pictureBox1.Image = System.Drawing.Image.FromStream(ns);
+                t1.Stop();
+                if (skt.Connected == true)
+                {
+                    while (true)
+                    {
+                        ReceiveImage();
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            retornar();
         }
 
         public Bitmap currentImage { get; set; }
@@ -105,7 +165,8 @@ namespace OCRTest
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-
+            th = new Thread(new ThreadStart(ReceiveImage));
+            th.Start();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -124,7 +185,7 @@ namespace OCRTest
 
             Rectangle rect = new Rectangle(0, 0, showImg.Width, showImg.Height);
             BitmapData bmpData = showImg.LockBits(rect, ImageLockMode.ReadWrite, showImg.PixelFormat);
-
+            
             bc.GetObjectsRectangles().ToList().ForEach(i =>
             {
                 Crop filter = new Crop(new Rectangle(i.X, i.Y, 230,75));
@@ -138,9 +199,28 @@ namespace OCRTest
                 StringBuilder sb = new StringBuilder();
                 foreach (tessnet2.Word word in result)
                     sb.Append(word.Text + " ");
+                //try
+                //{
+
+                //    string line = String.Format(sb.ToString());
+                //    byte[] buffer = Encoding.ASCII.GetBytes(line);
+                //    client = new TcpClient(GetIpAdress(), 4243);
+                //    ns = client.GetStream();
+                //    br = new BinaryWriter(ns);
+                //    //BinaryFormatter bf = new BinaryFormatter();
+                //    //Bitmap newImage = (Bitmap)bf.Deserialize(ns);
+                //    //pictureBox1.Image = newImage;
+                //    br.Write(buffer);
+                //    br.Close();
+                //    ns.Close();
+                //    client.Close();
+
+                //}
+                //catch (Exception ex) { MessageBox.Show(ex.Message); }
                 MessageBox.Show("?"/*String.Format(sb.ToString())*/);
                 textBox1.Text = sb.ToString();
                 pictureBox1.Image = img2;
+               
             });
 
             showImg.UnlockBits(bmpData);
