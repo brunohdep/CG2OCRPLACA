@@ -286,3 +286,6 @@ C:\Users\a120002\Documents\GitHub\Computacaografica2\OCR\OCRTest\obj\Debug\OCRTe
 C:\Users\a120002\Documents\GitHub\Computacaografica2\OCR\OCRTest\obj\Debug\OCRTest.FormMain.resources
 C:\Users\a120002\Documents\GitHub\Computacaografica2\OCR\OCRTest\obj\Debug\OCRTest.Properties.Resources.resources
 C:\Users\a120002\Documents\GitHub\Computacaografica2\OCR\OCRTest\obj\Debug\OCRTest.csproj.GenerateResource.Cache
+C:\Users\a120002\Documents\GitHub\Computacaografica2\CG2OCRPLACA\OCR\OCRTest\bin\Debug\OCRTest.exe.config
+C:\Users\a120002\Documents\GitHub\Computacaografica2\CG2OCRPLACA\OCR\OCRTest\obj\Debug\OCRTest.exe
+C:\Users\a120002\Documents\GitHub\Computacaografica2\CG2OCRPLACA\OCR\OCRTest\obj\Debug\OCRTest.pdb
