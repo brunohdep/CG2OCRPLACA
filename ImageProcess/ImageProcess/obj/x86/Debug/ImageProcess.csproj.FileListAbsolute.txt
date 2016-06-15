@@ -1,0 +1,153 @@
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.exe.config
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.exe
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.pdb
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Controls.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.DebuggerVisualizers (2010).dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Fuzzy.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Genetic.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.Formats.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.IPPrototyper.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.MachineLearning.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Math.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Neuro.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Lego.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Surveyor.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.TeRK.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.DirectShow.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.FFMPEG.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Kinect.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.VFW.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Ximea.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Vision.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\tessnet2_32.dll
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Controls.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Fuzzy.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Genetic.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.Formats.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.MachineLearning.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Math.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Neuro.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Lego.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Surveyor.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.TeRK.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.DirectShow.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.FFMPEG.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Kinect.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.VFW.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Ximea.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Vision.xml
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\tessnet2_32.pdb
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.FrmMain.resources
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.Properties.Resources.resources
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.csproj.GenerateResource.Cache
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.exe
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.pdb
+C:\Users\life-\OneDrive\Documentos\GitHub\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.exe.config
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.exe
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.pdb
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.exe
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.pdb
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Controls.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.DebuggerVisualizers (2010).dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Fuzzy.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Genetic.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.Formats.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.IPPrototyper.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.MachineLearning.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Math.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Neuro.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Lego.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Surveyor.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.TeRK.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.DirectShow.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.FFMPEG.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Kinect.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.VFW.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Ximea.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Vision.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\tessnet2_32.dll
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Controls.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Fuzzy.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Genetic.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.Formats.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.MachineLearning.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Math.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Neuro.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Lego.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Surveyor.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.TeRK.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.DirectShow.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.FFMPEG.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Kinect.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.VFW.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Ximea.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Vision.xml
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\tessnet2_32.pdb
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.FrmMain.resources
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.Properties.Resources.resources
+C:\Users\Gabriel\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.csproj.GenerateResource.Cache
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.exe.config
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.exe
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.pdb
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.exe
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\ImageProcess.pdb
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Controls.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.DebuggerVisualizers (2010).dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Fuzzy.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Genetic.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.Formats.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.IPPrototyper.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.MachineLearning.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Math.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Neuro.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Lego.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Surveyor.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.TeRK.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.DirectShow.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.FFMPEG.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Kinect.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.VFW.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Ximea.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Vision.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\tessnet2_32.dll
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Controls.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Fuzzy.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Genetic.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Imaging.Formats.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.MachineLearning.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Math.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Neuro.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Lego.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.Surveyor.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Robotics.TeRK.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.DirectShow.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.FFMPEG.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Kinect.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.VFW.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Video.Ximea.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\AForge.Vision.xml
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\bin\x86\Debug\tessnet2_32.pdb
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.csprojResolveAssemblyReference.cache
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.FrmMain.resources
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.Properties.Resources.resources
+C:\Users\life-\Desktop\novo cg\Computacaografica\ImageProcess\ImageProcess\obj\x86\Debug\ImageProcess.csproj.GenerateResource.Cache
