@@ -22,11 +22,19 @@ namespace OCRTest
         public FormMain()
         {
             InitializeComponent();
+<<<<<<< HEAD
             //String ip = "172.16.102.13";
             //t1 = new TcpListener(ip, 4243);
             //cliente = default(TcpClient);
             //t1.Start();
             //cliente = t1.AcceptTcpClient();
+=======
+            String ip = "172.16.102.13";
+            t1 = new TcpListener(ip, 4243);
+            cliente = default(TcpClient);
+            t1.Start();
+            cliente = t1.AcceptTcpClient();
+>>>>>>> d42502b7af47b1297d378bdee8a3befcd18cb81b
 
         }
 
@@ -94,6 +102,15 @@ namespace OCRTest
             newImage = new AForge.Imaging.Filters.Median().Apply(newImage);
             newImage = new AForge.Imaging.Filters.Erosion().Apply(newImage);
             newImage = new AForge.Imaging.Filters.Erosion().Apply(newImage);
+<<<<<<< HEAD
+=======
+            //newImage = filter.Apply(newImage);
+            // newImage = filter.Apply(newImage);
+            // Erosion filter2 = new Erosion();
+            // newImage = filter2.Apply(newImage);
+            //newImage = filter2.Apply(newImage);
+            // newImage = filter2.Apply(newImage);
+>>>>>>> d42502b7af47b1297d378bdee8a3befcd18cb81b
             return newImage;
         }
 

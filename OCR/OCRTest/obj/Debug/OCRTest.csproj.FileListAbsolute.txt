@@ -337,6 +337,7 @@ C:\Users\a120002\Documents\GitHub\Computacaografica2\CG2OCRPLACA\OCR\OCRTest\obj
 C:\Users\a120002\Documents\GitHub\Computacaografica2\CG2OCRPLACA\OCR\OCRTest\obj\Debug\OCRTest.FormMain.resources
 C:\Users\a120002\Documents\GitHub\Computacaografica2\CG2OCRPLACA\OCR\OCRTest\obj\Debug\OCRTest.Properties.Resources.resources
 C:\Users\a120002\Documents\GitHub\Computacaografica2\CG2OCRPLACA\OCR\OCRTest\obj\Debug\OCRTest.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\OCR\OCRTest\bin\Debug\OCRTest.exe.config
 C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\OCR\OCRTest\obj\Debug\OCRTest.exe
 C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\OCR\OCRTest\obj\Debug\OCRTest.pdb
@@ -388,3 +389,5 @@ C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\OCR\OCRTest\bin\Debug\AForge.Video
 C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\OCR\OCRTest\bin\Debug\AForge.Video.Ximea.xml
 C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\OCR\OCRTest\bin\Debug\AForge.Vision.xml
 C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\OCR\OCRTest\bin\Debug\tessnet2_64.pdb
+=======
+>>>>>>> d42502b7af47b1297d378bdee8a3befcd18cb81b
