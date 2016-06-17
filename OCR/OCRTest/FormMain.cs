@@ -22,20 +22,18 @@ namespace OCRTest
         public FormMain()
         {
             InitializeComponent();
-            //String ip = "172.16.102.13";
-            //t1 = new TcpListener(ip, 4243);
-            //cliente = default(TcpClient);
-            //t1.Start();
-            //cliente = t1.AcceptTcpClient();
         }
 
         TcpListener t1;
         Socket skt;
         NetworkStream ns;
-        StreamReader sr;
+        //StreamReader sr;
         Thread th;
-        TcpClient cliente;
+       TcpClient cliente;
         String mensagem = "Retornou";
+
+        NetworkStream ns2;
+        TcpClient cliente2;
 
         public void retornar() {
             ns = cliente.GetStream();
@@ -165,9 +163,10 @@ namespace OCRTest
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
+            List<string> placas = new List<string>();
             var img = (Bitmap)pictureBox1.Image.Clone();
             var showImg = (Bitmap)pictureBox1.Image.Clone();
-            //img = Grayscale.CommonAlgorithms.Y.Apply(img);
+           // img = Grayscale.CommonAlgorithms.Y.Apply(img);
             img = new OtsuThreshold().Apply(img);
             img = new Erosion().Apply(img);
             img = new Invert().Apply(img);
@@ -185,7 +184,6 @@ namespace OCRTest
                 Crop filter = new Crop(new Rectangle(i.X, i.Y, 230,75));
                 var img2 = (Bitmap)filter.Apply(img);
                 img2 = new Invert().Apply(img2);
-                //Drawing.Rectangle(bmpData, i, Color.Black);
                 var ocr = new tessnet2.Tesseract();
                 ocr.SetVariable("tesseract_char_whitelist", "ABCDEFGHIJKLMNOPQRSTUVXWYZ-1234567890");
                 ocr.Init(@"tessdata", "eng", false);
@@ -193,30 +191,36 @@ namespace OCRTest
                 StringBuilder sb = new StringBuilder();
                 foreach (tessnet2.Word word in result)
                     sb.Append(word.Text + " ");
-                //try
-                //{
-
-                //    string line = String.Format(sb.ToString());
-                //    byte[] buffer = Encoding.ASCII.GetBytes(line);
-                //    client = new TcpClient(GetIpAdress(), 4243);
-                //    ns = client.GetStream();
-                //    br = new BinaryWriter(ns);
-                //    //BinaryFormatter bf = new BinaryFormatter();
-                //    //Bitmap newImage = (Bitmap)bf.Deserialize(ns);
-                //    //pictureBox1.Image = newImage;
-                //    br.Write(buffer);
-                //    br.Close();
-                //    ns.Close();
-                //    client.Close();
-
-                //}
-                //catch (Exception ex) { MessageBox.Show(ex.Message); }
+                //cliente para servidor
+                string aux;
+                aux = sb.ToString();
+                if (aux.Length >=6)
+                {
+                    placas.Add(aux);
+              
+                }
+                   
                 MessageBox.Show("?"/*String.Format(sb.ToString())*/);
                 textBox1.Text = sb.ToString();
                 pictureBox1.Image = img2;
                
             });
 
+            foreach (string aux2 in placas)
+            {
+                try
+                {
+
+                    string cabecalho = "3";
+                    cabecalho += aux2;
+                    byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
+                    cliente2 = new TcpClient("172.16.102.113", 4250);
+                    ns2 = cliente2.GetStream();
+                    ns2.Write(buffer, 0, buffer.Length);
+                    ns2.Flush();
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
+            } 
             showImg.UnlockBits(bmpData);
 
             pictureBox1.Image = img;
