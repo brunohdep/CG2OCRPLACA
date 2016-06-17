@@ -1,0 +1,18 @@
+C:\Users\Gabriel\Desktop\novo cg\client\client\bin\Debug\client.exe.config
+C:\Users\Gabriel\Desktop\novo cg\client\client\bin\Debug\client.exe
+C:\Users\Gabriel\Desktop\novo cg\client\client\bin\Debug\client.pdb
+C:\Users\Gabriel\Desktop\novo cg\client\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Desktop\novo cg\client\client\obj\Debug\client.Form1.resources
+C:\Users\Gabriel\Desktop\novo cg\client\client\obj\Debug\client.Properties.Resources.resources
+C:\Users\Gabriel\Desktop\novo cg\client\client\obj\Debug\client.csproj.GenerateResource.Cache
+C:\Users\Gabriel\Desktop\novo cg\client\client\obj\Debug\client.exe
+C:\Users\Gabriel\Desktop\novo cg\client\client\obj\Debug\client.pdb
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\bin\Debug\client.exe.config
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.exe
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.pdb
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\bin\Debug\client.exe
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\bin\Debug\client.pdb
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.Form1.resources
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.Properties.Resources.resources
+C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.csproj.GenerateResource.Cache
