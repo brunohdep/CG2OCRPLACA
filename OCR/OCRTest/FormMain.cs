@@ -35,26 +35,89 @@ namespace OCRTest
         NetworkStream ns2;
         TcpClient cliente2;
 
-        public void retornar() {
-            ns = cliente.GetStream();
-            byte[] buffer = Encoding.ASCII.GetBytes(mensagem);
-            ns.Write(buffer, 0, buffer.Length);
-        }
+        //public void retornar() {
+        //    ns = cliente.GetStream();
+        //    byte[] buffer = Encoding.ASCII.GetBytes(mensagem);
+        //    ns.Write(buffer, 0, buffer.Length);
+        //}
         
 
-        string GetIpAdress()
-        {
-            IPHostEntry host;
-            string localip = "?";
-            host = Dns.GetHostEntry(Dns.GetHostName());
-            foreach (IPAddress ip in host.AddressList)
+        //string GetIpAdress()
+        //{
+        //    IPHostEntry host;
+        //    string localip = "?";
+        //    host = Dns.GetHostEntry(Dns.GetHostName());
+        //    foreach (IPAddress ip in host.AddressList)
+        //    {
+        //        if (ip.AddressFamily.ToString() == "InterNetwork")
+        //        {
+        //            localip = ip.ToString();
+        //        }
+        //    }
+        //    return localip;
+        //}
+        private void processo(){
+            List<string> placas = new List<string>();
+            var img = (Bitmap)pictureBox1.Image.Clone();
+            var showImg = (Bitmap)pictureBox1.Image.Clone();
+            // img = Grayscale.CommonAlgorithms.Y.Apply(img);
+            img = new OtsuThreshold().Apply(img);
+            img = new Erosion().Apply(img);
+            img = new Invert().Apply(img);
+
+            BlobCounter bc = new BlobCounter();
+            bc.BackgroundThreshold = Color.Black;
+            bc.ProcessImage(img);
+            MessageBox.Show(String.Format("The image contains {0} objects.", bc.ObjectsCount));
+
+            Rectangle rect = new Rectangle(0, 0, showImg.Width, showImg.Height);
+            BitmapData bmpData = showImg.LockBits(rect, ImageLockMode.ReadWrite, showImg.PixelFormat);
+
+            bc.GetObjectsRectangles().ToList().ForEach(i =>
             {
-                if (ip.AddressFamily.ToString() == "InterNetwork")
+                Crop filter = new Crop(new Rectangle(i.X, i.Y, 230, 75));
+                var img2 = (Bitmap)filter.Apply(img);
+                img2 = new Invert().Apply(img2);
+                var ocr = new tessnet2.Tesseract();
+                ocr.SetVariable("tesseract_char_whitelist", "ABCDEFGHIJKLMNOPQRSTUVXWYZ-1234567890");
+                ocr.Init(@"tessdata", "eng", false);
+                var result = ocr.DoOCR(img2, Rectangle.Empty);
+                StringBuilder sb = new StringBuilder();
+                foreach (tessnet2.Word word in result)
+                    sb.Append(word.Text + " ");
+                //cliente para servidor
+                string aux;
+                aux = sb.ToString();
+                if (aux.Length >= 6)
                 {
-                    localip = ip.ToString();
+                    placas.Add(aux);
+
                 }
+
+                MessageBox.Show("?"/*String.Format(sb.ToString())*/);
+                textBox1.Text = sb.ToString();
+                pictureBox1.Image = img2;
+
+            });
+
+            foreach (string aux2 in placas)
+            {
+                try
+                {
+
+                    string cabecalho = "3";
+                    cabecalho += aux2;
+                    byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
+                    cliente2 = new TcpClient("172.16.102.113", 4250);
+                    ns2 = cliente2.GetStream();
+                    ns2.Write(buffer, 0, buffer.Length);
+                    ns2.Flush();
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
             }
-            return localip;
+            showImg.UnlockBits(bmpData);
+
+            pictureBox1.Image = img;
         }
         void ReceiveImage()
         {
@@ -65,6 +128,7 @@ namespace OCRTest
                 skt = t1.AcceptSocket();
                 ns = new NetworkStream(skt);
                 pictureBox1.Image = System.Drawing.Image.FromStream(ns);
+                processo();
                 t1.Stop();
                 if (skt.Connected == true)
                 {
@@ -75,7 +139,7 @@ namespace OCRTest
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-            retornar();
+            //retornar();
         }
 
         public Bitmap currentImage { get; set; }
@@ -94,6 +158,7 @@ namespace OCRTest
 
             return newImage;
         }
+        
 
         private void cortar(int x, int y, int w, int z)
         {
