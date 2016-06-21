@@ -23,25 +23,60 @@ namespace OCRTest
         {
             InitializeComponent();
         }
-
+        List<string> placas = new List<string>();
         TcpListener t1;
+        TcpListener t2;
         Socket skt;
+        Socket skt2;
         NetworkStream ns;
         //StreamReader sr;
         Thread th;
+        Thread th2;
        TcpClient cliente;
-        String mensagem = "Retornou";
+        String placa;
 
         NetworkStream ns2;
+        NetworkStream ns3;
         TcpClient cliente2;
+        string cabecalho;
+        string cabecalho2;
+        private void aceito()
+        {
+            try
+            {
+                t2 = new TcpListener(4350);
+                t2.Start();
+                skt2 = t2.AcceptSocket();
+                ns3 = new NetworkStream(skt2);
+                byte[] buffer = new byte[10000];
+                ns3.Read(buffer, 0, 1000);
+                //Recebe o cabeçalho
+                cabecalho2 = Encoding.UTF8.GetString(buffer);
+                cabecalho2 = cabecalho2.Substring(0, cabecalho2.IndexOf("$"));
+                Console.WriteLine(cabecalho2);
+                //Identifica a ação e verifica o que fazer
+                if ((cabecalho2.Substring(0, 1).Equals("2")) && (cabecalho2.Substring(1, 1).Equals("1")) )
+                {
+                    Console.Write("Placa reconhecida");
+                }
+                else if ((cabecalho2.Substring(0, 1).Equals("2")) && (cabecalho2.Substring(1, 1).Equals("0")))
+                {
+                    Console.Write("Placa não reconhecida");
+                    //retorna o cabeçalho ao servidor
 
-        //public void retornar() {
-        //    ns = cliente.GetStream();
-        //    byte[] buffer = Encoding.ASCII.GetBytes(mensagem);
-        //    ns.Write(buffer, 0, buffer.Length);
-        //}
-        
 
+                }
+                t2.Stop();
+                if (skt.Connected == true)
+                {
+                    while (true)
+                    {
+                        aceito();
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
         //string GetIpAdress()
         //{
         //    IPHostEntry host;
@@ -56,11 +91,36 @@ namespace OCRTest
         //    }
         //    return localip;
         //}
-        private void processo(){
-            List<string> placas = new List<string>();
+        //private void enviar()
+        //{
+        //    foreach (string aux2 in placas)
+        //    {
+        //        string cabecalho;
+        //        try
+        //        {
+        //            if (aux2.Length > 6)
+        //            {
+        //                cabecalho = "3";
+        //                cabecalho += aux2 + "$";
+        //            }
+        //            else
+        //            {
+        //                cabecalho = "4";
+        //            }
+        //            byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
+        //            cliente2 = new TcpClient("172.16.102.113", 4250);
+        //            ns2 = cliente2.GetStream();
+        //            ns2.Write(buffer, 0, buffer.Length);
+        //            ns2.Flush();
+        //        }
+        //        catch (Exception ex) { MessageBox.Show(ex.Message); }
+        //    }
+        //}
+        private void processo2()
+        {
             var img = (Bitmap)pictureBox1.Image.Clone();
             var showImg = (Bitmap)pictureBox1.Image.Clone();
-            // img = Grayscale.CommonAlgorithms.Y.Apply(img);
+            //img = Grayscale.CommonAlgorithms.Y.Apply(img);
             img = new OtsuThreshold().Apply(img);
             img = new Erosion().Apply(img);
             img = new Invert().Apply(img);
@@ -68,7 +128,7 @@ namespace OCRTest
             BlobCounter bc = new BlobCounter();
             bc.BackgroundThreshold = Color.Black;
             bc.ProcessImage(img);
-            MessageBox.Show(String.Format("The image contains {0} objects.", bc.ObjectsCount));
+            // MessageBox.Show(String.Format("The image contains {0} objects.", bc.ObjectsCount));
 
             Rectangle rect = new Rectangle(0, 0, showImg.Width, showImg.Height);
             BitmapData bmpData = showImg.LockBits(rect, ImageLockMode.ReadWrite, showImg.PixelFormat);
@@ -93,28 +153,103 @@ namespace OCRTest
                     placas.Add(aux);
 
                 }
-
-                MessageBox.Show("?"/*String.Format(sb.ToString())*/);
-                textBox1.Text = sb.ToString();
+                //foreach (string aux2 in placas)
+                //{
+                //    string cabecalho;
+                //    try
+                //    {
+                //        if (aux2.Length > 6)
+                //        {
+                //            cabecalho = "3";
+                //            cabecalho += aux2 + "$";
+                //        }
+                //        else
+                //        {
+                //            cabecalho = "4";
+                //        }
+                //        byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
+                //        cliente2 = new TcpClient("172.16.102.113", 4250);
+                //        ns2 = cliente2.GetStream();
+                //        ns2.Write(buffer, 0, buffer.Length);
+                //        ns2.Flush();
+                //    }
+                //    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                //}
+                //MessageBox.Show("?"/*String.Format(sb.ToString())*/);
+                //textBox1.Text = sb.ToString();
                 pictureBox1.Image = img2;
 
             });
 
-            foreach (string aux2 in placas)
-            {
-                try
-                {
+            showImg.UnlockBits(bmpData);
 
-                    string cabecalho = "3";
-                    cabecalho += aux2;
-                    byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
-                    cliente2 = new TcpClient("172.16.102.113", 4250);
-                    ns2 = cliente2.GetStream();
-                    ns2.Write(buffer, 0, buffer.Length);
-                    ns2.Flush();
+            pictureBox1.Image = img;
+        }
+        private void processo(){
+            List<string> placas = new List<string>();
+            var img = (Bitmap)pictureBox1.Image.Clone();
+            var showImg = (Bitmap)pictureBox1.Image.Clone();
+            img = Grayscale.CommonAlgorithms.Y.Apply(img);
+            img = new OtsuThreshold().Apply(img);
+            img = new Erosion().Apply(img);
+            img = new Invert().Apply(img);
+
+            BlobCounter bc = new BlobCounter();
+            bc.BackgroundThreshold = Color.Black;
+            bc.ProcessImage(img);
+           // MessageBox.Show(String.Format("The image contains {0} objects.", bc.ObjectsCount));
+
+            Rectangle rect = new Rectangle(0, 0, showImg.Width, showImg.Height);
+            BitmapData bmpData = showImg.LockBits(rect, ImageLockMode.ReadWrite, showImg.PixelFormat);
+
+            bc.GetObjectsRectangles().ToList().ForEach(i =>
+            {
+                Crop filter = new Crop(new Rectangle(i.X, i.Y, 230, 75));
+                var img2 = (Bitmap)filter.Apply(img);
+                img2 = new Invert().Apply(img2);
+                var ocr = new tessnet2.Tesseract();
+                ocr.SetVariable("tesseract_char_whitelist", "ABCDEFGHIJKLMNOPQRSTUVXWYZ-1234567890");
+                ocr.Init(@"tessdata", "eng", false);
+                var result = ocr.DoOCR(img2, Rectangle.Empty);
+                StringBuilder sb = new StringBuilder();
+                foreach (tessnet2.Word word in result)
+                    sb.Append(word.Text + " ");
+                //cliente para servidor
+                string aux;
+                aux = sb.ToString();
+                if (aux.Length >= 6)
+                {
+                    placas.Add(aux);
+
                 }
-                catch (Exception ex) { MessageBox.Show(ex.Message); }
-            }
+                foreach (string aux2 in placas)
+                {
+                    string cabecalho;
+                    try
+                    {
+                        if (aux2.Length > 6)
+                        {
+                            cabecalho = "3";
+                            cabecalho += aux2 + "$";
+                        }
+                        else
+                        {
+                            cabecalho = "4";
+                        }
+                        byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
+                        cliente2 = new TcpClient("172.16.102.113", 4250);
+                        ns2 = cliente2.GetStream();
+                        ns2.Write(buffer, 0, buffer.Length);
+                        ns2.Flush();
+                    }
+                    catch (Exception ex) { MessageBox.Show(ex.Message); }
+                }
+                //MessageBox.Show("?"/*String.Format(sb.ToString())*/);
+                //textBox1.Text = sb.ToString();
+                pictureBox1.Image = img2;
+
+            });
+
             showImg.UnlockBits(bmpData);
 
             pictureBox1.Image = img;
@@ -129,6 +264,8 @@ namespace OCRTest
                 ns = new NetworkStream(skt);
                 pictureBox1.Image = System.Drawing.Image.FromStream(ns);
                 processo();
+                //processo2();
+                //enviar();
                 t1.Stop();
                 if (skt.Connected == true)
                 {
@@ -224,6 +361,8 @@ namespace OCRTest
         {
             th = new Thread(new ThreadStart(ReceiveImage));
             th.Start();
+            th2 = new Thread(new ThreadStart(aceito));
+            th2.Start();
         }
 
         private void toolStripButton3_Click(object sender, EventArgs e)
@@ -277,7 +416,7 @@ namespace OCRTest
                 {
 
                     string cabecalho = "3";
-                    cabecalho += aux2;
+                    cabecalho += aux2 + "$";
                     byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
                     cliente2 = new TcpClient("172.16.102.113", 4250);
                     ns2 = cliente2.GetStream();

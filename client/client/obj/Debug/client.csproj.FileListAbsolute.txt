@@ -16,12 +16,3 @@ C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.cspro
 C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.Form1.resources
 C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.Properties.Resources.resources
 C:\Users\Gabriel\Documents\GitHub\sd-client\client\client\obj\Debug\client.csproj.GenerateResource.Cache
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\bin\Debug\client.exe.config
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\obj\Debug\client.exe
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\obj\Debug\client.pdb
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\bin\Debug\client.exe
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\bin\Debug\client.pdb
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\obj\Debug\client.csprojResolveAssemblyReference.cache
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\obj\Debug\client.Form1.resources
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\obj\Debug\client.Properties.Resources.resources
-C:\Users\a120002\Documents\GitHub\CG2OCRPLACA\client\client\obj\Debug\client.csproj.GenerateResource.Cache
