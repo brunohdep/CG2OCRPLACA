@@ -53,18 +53,16 @@ namespace OCRTest
                 //Recebe o cabeçalho
                 cabecalho2 = Encoding.UTF8.GetString(buffer);
                 cabecalho2 = cabecalho2.Substring(0, cabecalho2.IndexOf("$"));
-                Console.WriteLine(cabecalho2);
+                
                 //Identifica a ação e verifica o que fazer
                 if ((cabecalho2.Substring(0, 1).Equals("2")) && (cabecalho2.Substring(1, 1).Equals("1")) )
                 {
-                    Console.Write("Placa reconhecida");
+                    Console.WriteLine("Ação: 2-Placa reconhecida");
                 }
                 else if ((cabecalho2.Substring(0, 1).Equals("2")) && (cabecalho2.Substring(1, 1).Equals("0")))
                 {
-                    Console.Write("Placa não reconhecida");
-                    //retorna o cabeçalho ao servidor
-
-
+                    Console.WriteLine("Ação: 2-Placa não reconhecida");
+                   
                 }
                 t2.Stop();
                 if (skt.Connected == true)
@@ -77,45 +75,6 @@ namespace OCRTest
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
-        //string GetIpAdress()
-        //{
-        //    IPHostEntry host;
-        //    string localip = "?";
-        //    host = Dns.GetHostEntry(Dns.GetHostName());
-        //    foreach (IPAddress ip in host.AddressList)
-        //    {
-        //        if (ip.AddressFamily.ToString() == "InterNetwork")
-        //        {
-        //            localip = ip.ToString();
-        //        }
-        //    }
-        //    return localip;
-        //}
-        //private void enviar()
-        //{
-        //    foreach (string aux2 in placas)
-        //    {
-        //        string cabecalho;
-        //        try
-        //        {
-        //            if (aux2.Length > 6)
-        //            {
-        //                cabecalho = "3";
-        //                cabecalho += aux2 + "$";
-        //            }
-        //            else
-        //            {
-        //                cabecalho = "4";
-        //            }
-        //            byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
-        //            cliente2 = new TcpClient("172.16.102.113", 4250);
-        //            ns2 = cliente2.GetStream();
-        //            ns2.Write(buffer, 0, buffer.Length);
-        //            ns2.Flush();
-        //        }
-        //        catch (Exception ex) { MessageBox.Show(ex.Message); }
-        //    }
-        //}
         private void processo2()
         {
             var img = (Bitmap)pictureBox1.Image.Clone();
@@ -128,8 +87,7 @@ namespace OCRTest
             BlobCounter bc = new BlobCounter();
             bc.BackgroundThreshold = Color.Black;
             bc.ProcessImage(img);
-            // MessageBox.Show(String.Format("The image contains {0} objects.", bc.ObjectsCount));
-
+            
             Rectangle rect = new Rectangle(0, 0, showImg.Width, showImg.Height);
             BitmapData bmpData = showImg.LockBits(rect, ImageLockMode.ReadWrite, showImg.PixelFormat);
 
@@ -153,30 +111,6 @@ namespace OCRTest
                     placas.Add(aux);
 
                 }
-                //foreach (string aux2 in placas)
-                //{
-                //    string cabecalho;
-                //    try
-                //    {
-                //        if (aux2.Length > 6)
-                //        {
-                //            cabecalho = "3";
-                //            cabecalho += aux2 + "$";
-                //        }
-                //        else
-                //        {
-                //            cabecalho = "4";
-                //        }
-                //        byte[] buffer = Encoding.ASCII.GetBytes(cabecalho + "$");
-                //        cliente2 = new TcpClient("172.16.102.113", 4250);
-                //        ns2 = cliente2.GetStream();
-                //        ns2.Write(buffer, 0, buffer.Length);
-                //        ns2.Flush();
-                //    }
-                //    catch (Exception ex) { MessageBox.Show(ex.Message); }
-                //}
-                //MessageBox.Show("?"/*String.Format(sb.ToString())*/);
-                //textBox1.Text = sb.ToString();
                 pictureBox1.Image = img2;
 
             });
@@ -197,8 +131,6 @@ namespace OCRTest
             BlobCounter bc = new BlobCounter();
             bc.BackgroundThreshold = Color.Black;
             bc.ProcessImage(img);
-           // MessageBox.Show(String.Format("The image contains {0} objects.", bc.ObjectsCount));
-
             Rectangle rect = new Rectangle(0, 0, showImg.Width, showImg.Height);
             BitmapData bmpData = showImg.LockBits(rect, ImageLockMode.ReadWrite, showImg.PixelFormat);
 
@@ -244,8 +176,7 @@ namespace OCRTest
                     }
                     catch (Exception ex) { MessageBox.Show(ex.Message); }
                 }
-                //MessageBox.Show("?"/*String.Format(sb.ToString())*/);
-                //textBox1.Text = sb.ToString();
+                
                 pictureBox1.Image = img2;
 
             });
@@ -254,6 +185,7 @@ namespace OCRTest
 
             pictureBox1.Image = img;
         }
+        
         void ReceiveImage()
         {
             try
@@ -264,8 +196,6 @@ namespace OCRTest
                 ns = new NetworkStream(skt);
                 pictureBox1.Image = System.Drawing.Image.FromStream(ns);
                 processo();
-                //processo2();
-                //enviar();
                 t1.Stop();
                 if (skt.Connected == true)
                 {
@@ -276,7 +206,6 @@ namespace OCRTest
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
-            //retornar();
         }
 
         public Bitmap currentImage { get; set; }
